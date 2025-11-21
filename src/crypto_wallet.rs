@@ -3,6 +3,14 @@ use alloy::signers::local::PrivateKeySigner;
 pub type WalletAddress = String;
 pub type PrivateKey = String;
 
+/// Generates a new random ECDSA wallet address and private key.
+///
+/// # Arguments
+/// * `None`
+///
+/// # Returns
+/// * `WalletAddress` - The generated wallet address.
+/// * `PrivateKey` - The generated private key.
 pub fn generate() -> (WalletAddress, PrivateKey) {
     let signer = PrivateKeySigner::random();
 
